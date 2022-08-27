@@ -1,8 +1,8 @@
 # alpine-sandbox
 Every pieces of js codes must be inside of a component, otherwise code won't run :)
 
-## Properties
-There are 15 properties in alpine.js 
+## Attributes
+There are 15 attributes in alpine.js 
 - [x] x-data: state or component data
 - [x] x-bind: dynamically bind attributes 
 - [x] x-on: for binding events
