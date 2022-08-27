@@ -9,7 +9,7 @@ There are 15 properties in alpine.js
 - [ ] x-html: ⚠ TODO
 - [x] x-model: modeling with input
 - [x] x-show: show an element based on condition
-- [ ] x-transition 
+- [x] x-transition: transition efffects on elements
 - [ ] x-if 
 - [ ] x-for 
 - [ ] x-init 
