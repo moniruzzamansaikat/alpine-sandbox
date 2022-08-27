@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alpine js sandboxc</title>
+  <script src="https://unpkg.com/alpinejs" defer></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+
+  <style>
+    [x-cloak] {
+      display: none;
+    }
+  </style>
+
+</head>
+
+<body>
+  <div class="container">
+    <h1 class="text-center">Apline Js</h1>
+
+
+    <div x-data="{open: false, name: 'Moniruzzaman Saikat'}">
+      <button class="btn btn-primary mb-2" x-on:click="open = !open">Toggle</button>
+
+      <div class="card" x-show="open" x-cloak>
+        <div class="card-body">
+          <p>
+            <strong x-text="name"></strong> Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla facilis,
+            quibusdam provident dolorum neque
+            accusamus! Quisquam ab animi ratione, nisi, impedit eligendi ipsa dicta molestiae reiciendis recusandae quam
+            totam. Aperiam aliquid eius culpa laborum, deleniti eaque corrupti expedita omnis debitis velit tempora
+            vitae ad, libero saepe doloremque architecto at, ut voluptate temporibus recusandae accusantium quas ullam!
+            Veritatis omnis maiores fugit eligendi. Ea sed provident quae fugit consequatur libero sunt repellendus est
+            cupiditate aliquid, dicta quas, vero, dolor cum alias eius qui eligendi corrupti. Incidunt ipsa veniam
+            dolorem ut dicta beatae veritatis laboriosam facilis repellendus esse est numquam, corporis ratione harum!
+          </p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</body>
+
+</html>
