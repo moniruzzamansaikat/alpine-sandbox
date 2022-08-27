@@ -6,7 +6,7 @@ There are 15 properties in alpine.js
 - [x] x-bind: dynamically bind attributes 
 - [x] x-on: for binding events
 - [x] x-text: show text but not html render
-- [ ] x-html 
+- [ ] x-html: ⚠ TODO
 - [x] x-model: modeling with input
 - [x] x-show: show an element based on condition
 - [ ] x-transition 
