@@ -12,8 +12,8 @@ There are 15 properties in alpine.js
 - [x] x-transition: transition efffects on elements
 - [x] x-if: conditionaly add or remove elements 
 - [x] x-for: loop for data 
-- [x] x-init 
-- [x] x-effect 
-- [ ] x-ref 
+- [x] x-init: run some code when element intialized 
+- [x] x-effect: track changes for dependencies
+- [x] x-ref: reference to an elemtn
 - [x] x-cloak: an helper attribute for removing delay  
 - [ ] x-ignore  
