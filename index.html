@@ -124,6 +124,22 @@
       </div>
     </div>
 
+    <!-- x-ref -->
+    <div class="card my-4" x-data="">
+      <div class="card-body" x-ref="content">
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Inventore repudiandae tempora modi. Amet obcaecati,
+        incidunt officia, recusandae aspernatur ipsa, necessitatibus quae quisquam eos quod consectetur deserunt
+        corrupti doloremque porro veniam esse eveniet expedita libero deleniti rem provident! Adipisci pariatur porro
+        maxime? Neque ipsum expedita et! Laborum natus aliquam maxime beatae, dignissimos, expedita laudantium
+        laboriosam minus maiores fugiat iusto! Nemo exercitationem at ipsa amet quo eligendi quas corporis tempora
+        recusandae maiores, esse officia, doloremque incidunt, omnis consequuntur dicta enim? Molestiae minima aut odio
+        corrupti deserunt at minus ipsam, expedita repellat, asperiores explicabo voluptate voluptas mollitia laborum
+        illum tenetur. A, aut quia?
+      </div>
+      <button class="btn btn-info mb-3" x-on:click="navigator.clipboard.writeText($refs.content.innerHTML)">Copy
+        Text</button>
+    </div>
+
   </div>
 </body>
 
