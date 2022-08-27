@@ -67,6 +67,14 @@
       </div>
     </div>
 
+    <!-- x-model -->
+    <div class="card my-3" x-data="{text: ''}">
+      <div class="card-body">
+        <input type="text" class="form-control mb-3" x-model="text" placeholder="Write some text">
+        <strong x-show="text.length > 0" x-text="text  + '\'s length is ' + text.length"></strong>
+      </div>
+    </div>
+
   </div>
 </body>
 
