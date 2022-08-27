@@ -101,16 +101,20 @@
       </template>
     </div>
 
-    <!-- x-if -->
-    <div class="card" x-data="{posts: []}">
-      <template x-if="posts.length > 0" x-for="post in posts" class="">
-        <div class="card m-2">
-          <div class="card-body">
-            <h2 x-text="post.title"></h2>
-            <p x-text="post.body"></p>
+    <!-- x-if, x-effect -->
+    <div class="card my-3" x-data="{title: '', posts: []}">
+      <div class="card-body">
+        <input x-model="title" type="text" class="form-control" placeholder="enter post title" tabindex="1" x-on:blur="title.length > 0 ? posts.push({title}) : null; 
+          title='';" />
+        <div x-effect="console.log('new post added')"></div>
+        <template x-if="posts.length > 0" x-for="post in posts" class="">
+          <div class="card m-2">
+            <div class="card-body">
+              <h2 x-text="post?.title"></h2>
+            </div>
           </div>
-        </div>
-      </template>
+        </template>
+      </div>
     </div>
 
     <!-- x-init -->
