@@ -23,6 +23,7 @@
     <h1 class="text-center">Apline Js</h1>
 
 
+    <!-- x-show, x-on -->
     <div x-data="{open: false, name: 'Moniruzzaman Saikat'}">
       <button class="btn btn-primary mb-2" x-on:click="open = !open">Toggle</button>
 
@@ -38,6 +39,30 @@
             cupiditate aliquid, dicta quas, vero, dolor cum alias eius qui eligendi corrupti. Incidunt ipsa veniam
             dolorem ut dicta beatae veritatis laboriosam facilis repellendus esse est numquam, corporis ratione harum!
           </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- x-bind -->
+    <div x-data="{show: false}" class="mt-3">
+      <button class="btn btn-outline-success" x-on:click="show = !show">Toggle Show</button>
+      <div class="card bg-success my-2 text-white" x-bind:class="show ? 'd-block' : 'd-none'" x-cloak>
+        <div class="card-body">
+          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laborum beatae commodi quisquam nisi repellat
+            molestiae cupiditate minus, maxime deleniti odio quidem dignissimos blanditiis vitae at. Quos deleniti ex
+            nostrum culpa voluptate! Illum, vero. Quam asperiores quis vero voluptatem. Ut fugiat quis aspernatur, cum
+            similique animi obcaecati nostrum. Hic harum dignissimos, possimus earum repellat, sequi aspernatur ea
+            quibusdam nihil nemo ipsa provident incidunt corrupti voluptatem necessitatibus cumque doloremque
+            repudiandae! Ipsum repudiandae dolorum, nostrum animi aspernatur autem ullam sunt numquam beatae repellendus
+            atque, suscipit voluptatum neque magni inventore, magnam officia consectetur ratione laborum. Ullam
+            architecto aliquid commodi in aut. Adipisci, ratione. Est quod suscipit iusto ratione aperiam? Quo id magnam
+            qui placeat a accusamus quas expedita totam, omnis tempora pariatur inventore, doloribus possimus quis
+            ratione amet illum repellendus quasi, nisi excepturi deleniti suscipit quae. Iure rem incidunt perferendis
+            nostrum vero molestias veniam quisquam aliquid cupiditate fugit dolor ex velit sequi similique animi magnam,
+            corrupti architecto! Consectetur laborum expedita maiores? Autem aspernatur quae doloremque nulla soluta?
+            Corrupti saepe similique ipsum consequatur ducimus corporis sapiente perferendis animi dolor sed eaque
+            maxime explicabo magnam officiis laudantium blanditiis quo, deserunt voluptatibus perspiciatis. Incidunt,
+            facilis tempore minus cum dolorum sit aspernatur rerum ea minima repellendus nobis. Itaque?</p>
         </div>
       </div>
     </div>

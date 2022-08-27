@@ -3,7 +3,7 @@
 ## Properties
 There are 15 properties in alpine.js 
 - [x] x-data
-- [ ] x-bind
+- [x] x-bind
 - [x] x-on
 - [x] x-text
 - [x] x-html 
