@@ -99,7 +99,18 @@
           </div>
         </div>
       </template>
+    </div>
 
+    <!-- x-if -->
+    <div class="card" x-data="{posts: []}">
+      <template x-if="posts.length > 0" x-for="post in posts" class="">
+        <div class="card m-2">
+          <div class="card-body">
+            <h2 x-text="post.title"></h2>
+            <p x-text="post.body"></p>
+          </div>
+        </div>
+      </template>
     </div>
 
 
