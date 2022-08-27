@@ -17,4 +17,4 @@ There are 15 properties in alpine.js
 - [x] x-effect: track changes for dependencies
 - [x] x-ref: reference to an elemtn
 - [x] x-cloak: an helper attribute for removing delay  
-- [ ] x-ignore  
+- [x] x-ignore: ignore a component by intialized by alpine

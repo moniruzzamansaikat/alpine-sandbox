@@ -45,8 +45,10 @@
     </div>
 
     <!-- x-bind -->
-    <div x-data="{show: false}" class="mt-3">
+    <div x-data="{show: false}" class="mt-3" x-ignore>
       <button class="btn btn-outline-success" x-on:click="show = !show">Toggle Show</button>
+      <br>
+      <span class="text-danger">I am ignored compo :)</span>
       <div class="card bg-success my-2 text-white" x-bind:class="show ? 'd-block' : 'd-none'" x-cloak x-transition>
         <div class="card-body">
           <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laborum beatae commodi quisquam nisi repellat
