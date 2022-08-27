@@ -1,4 +1,5 @@
 # alpine-sandbox
+Every pieces of js codes must be inside of a component, otherwise code won't run :)
 
 ## Properties
 There are 15 properties in alpine.js 
