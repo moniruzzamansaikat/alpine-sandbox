@@ -15,8 +15,26 @@
       display: none;
     }
 
+    .bg-dark {
+      background-color: #0a0a0a !important;
+    }
+
     .bg-dark * {
       color: white;
+    }
+
+    .bg-dark .card {
+      background-color: rgb(67, 67, 67);
+    }
+
+    .bg-dark .form-control {
+      background-color: #0F3D3E;
+      color: #fff;
+    }
+
+    .bg-dark .btn {
+      background-color: #413F42 !important;
+      border-color: #000000;
     }
 
     .shaked {
@@ -25,6 +43,8 @@
       backface-visibility: hidden;
       perspective: 1000px;
     }
+
+
 
     @keyframes shake {
 
@@ -53,7 +73,7 @@
 
 </head>
 
-<body x-data :class="$store.darkMode.on && 'bg-dark'">
+<body x-data :class="$store.darkMode.on && 'bg-dark'" @remove-post="$store.posts.remove($event.detail)">
   <div class="container">
     <h1 x-ref="animated" class="text-center display-2">Alpine.js properties</h1>
     <button :class="$store.darkMode.on && 'bg-dark'" class="btn btn-primary" @click="$store.darkMode.toggle()">Toggle
@@ -64,10 +84,80 @@
         $refs.animated.className = 'text-center display-2';
       }, 1000);
     ">Shake</button>
+
+    <!-- show posts -->
+    <h2 class="mt-3">List of posts</h2>
+    <div class="card" x-data="{title: ''}" @add-post="$store.posts.add($event.detail)">
+      <div class="card-body">
+        <form @submit.prevent="$dispatch('add-post', title); title = ''">
+          <div class="form-group">
+            <label for="title">Post title</label>
+            <input x-model="title" type="text" id="title" class="form-control mt-2" placeholder="Enter post title">
+          </div>
+          <div class="form-group mt-2">
+            <button type="submit" class="btn btn-success">Add Post</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!-- if no posts -->
+    <h2 x-show="$store.posts.data.length === 0" class="text-center my-3">No posts</h2>
+
+    <template x-for="post in $store.posts.data">
+      <div class="card my-3">
+        <div class="card-header d-flex justify-content-between">
+          <h2 x-text="post.title"></h2>
+          <button
+            :class="$store.darkMode.on ? 'btn btn-danger align-self-baseline text-danger' : 'btn btn-danger align-self-baseline'"
+            @click="$dispatch('remove-post', post.id)">x</button>
+        </div>
+        <div class="card-body">
+          <p x-html="post.body"></p>
+        </div>
+      </div>
+    </template>
   </div>
 
   <script>
     document.addEventListener('alpine:init', () => {
+      Alpine.store('posts', {
+        data: [{
+          "userId": 1,
+          "id": 1,
+          "title": "sunt aut facere repellat provident occaecati excepturi optio reprehenderit",
+          "body": "quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto"
+        },
+        {
+          "userId": 1,
+          "id": 2,
+          "title": "qui est esse",
+          "body": "est rerum tempore vitae\nsequi sint nihil reprehenderit dolor beatae ea dolores neque\nfugiat blanditiis voluptate porro vel nihil molestiae ut reiciendis\nqui aperiam non debitis possimus qui neque nisi nulla"
+        },
+        {
+          "userId": 1,
+          "id": 3,
+          "title": "ea molestias quasi exercitationem repellat qui ipsa sit aut",
+          "body": "et iusto sed quo iure\nvoluptatem occaecati omnis eligendi aut ad\nvoluptatem doloribus vel accusantium quis pariatur\nmolestiae porro eius odio et labore et velit aut"
+        },],
+
+        add(title) {
+          if (!title.trim()) return alert('title can\'t be empty ')
+
+          const post = {
+            userId: 1,
+            id: new Date().toTimeString(),
+            title,
+            body: "lorem ipsum......"
+          }
+
+          this.data.unshift(post);
+        },
+
+        remove(id) {
+          this.data = this.data.filter(post => post.id !== id);
+        }
+      });
 
       Alpine.store('darkMode', {
         on: true,
