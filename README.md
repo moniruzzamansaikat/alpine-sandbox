@@ -18,3 +18,12 @@ There are 15 attributes in alpine.js
 - [x] x-ref: reference to an elemtn
 - [x] x-cloak: an helper attribute for removing delay  
 - [x] x-ignore: ignore a component by intialized by alpine
+
+## Properties
+There are 6 properties
+- [ ] $store: acces a global store registered by Alpine.store(...)
+- [ ] $el: Reference the current DOM element
+- [ ] $dispatch: Dispatch a custom browser event from the current element
+- [ ] $watch: 
+- [ ] $refs
+- [ ] $nextTick
