@@ -21,8 +21,8 @@ There are 15 attributes in alpine.js
 
 ## Properties
 There are 6 properties
-- [ ] $store: acces a global store registered by Alpine.store(...)
-- [ ] $el: Reference the current DOM element
+- [x] $store: acces a global store registered by Alpine.store(...)
+- [x] $el: Reference the current DOM element
 - [ ] $dispatch: Dispatch a custom browser event from the current element
 - [ ] $watch: 
 - [ ] $refs
